@@ -19,3 +19,13 @@ if (import.meta.hot) {
     if (timer) clearInterval(timer);
   });
 }
+
+// 用于 缓存模块状态。
+//  两种写法
+// import.meta.hot?.data.index
+// import.meta.hot.data.cache = {
+//   //  当模块更新时， index 的值还保留。
+// getIndex () {
+//     return index
+// }
+// };
